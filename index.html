@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Formulario API</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <form id="form-login">
+            <!--Para el ingreso de dato-->
+            <label for="dato-login">Ingrese nombre de Pokemon</label>
+            <input type="text" id="dato-login" required>
+    
+            <input type="submit" id="botonSubmit" value="Enter">
+            <br>
+            <button type ="button" id="botonGuardar" >Guardar a BD</button>
+
+        </form>   
+        
+    </div>
+    
+    <div id="tableContainer">
+        <table id="imagenTable">
+            <tr>
+                <th>Imagen</th>
+            </tr>
+            <tr>
+                <td><img id="imagenPokemon" src="" ></td>
+            </tr>
+        </table>
+        
+        <table id="infoTable">
+            <tr>
+                <th>Fecha Actual</th>
+                <th>Nombre</th>
+                <th>Altura</th>
+                <th>Peso</th>
+            </tr>
+            <tr>
+                <td id="fechaActual"></td>
+                <td id="nombrePokemon"></td>
+                <td id="alturaPokemon"></td>
+                <td id="pesoPokemon"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="informacionApi">Información: El programa utiliza la API de pokemon https://pokeapi.co/ para buscar información de un pokemon. El usuario ingresa el nombre de un pokemon, por ejemplo: pikachu, charmander, squirtle, etc.. 
+        y al hacer clic en el botón ENTER se realiza una consulta a la API y se muestra la información.
+        El programa utiliza fetch para hacer una solicitud HTTP a la API y traer los datos del pokemon y por ultimo muestra la informacion en el programa. <br><br>
+    Al dar clic en el boton Guardar a BD se guardan los datos actuales de la consulta realizada en la base de datos pokemon_db en la tabla pokemon.</div>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
